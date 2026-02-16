@@ -1,53 +1,34 @@
-# ariharrison.github.io
+# Ari Harrison
 
-Personal website for Ari Harrison — Architect of the Intelligence Layer.
+**Architect of the Intelligence Layer**
 
-## Live Site
+I design intelligence infrastructure—the logic layers between foundation models and high-stakes decisions. Prediction infrastructure, compliance-aware tooling, and orchestration that turns conversation into computation.
 
-https://ariharrison.github.io
+## What I Do
 
-## Features
+I close the gap between AI reasoning and real-world action. I specialize in moving AI from "demo" to "production" by building the systems that handle failure, compliance, and scale automatically.
 
-- Single-page portfolio with smooth scroll navigation
-- Writings section powered by Supabase (optional)
-- Responsive design with elegant animations
-- Mobile-optimized with hamburger menu
+- **Strategic Focus** — Standardizing Contextual Intelligence & Orchestration
+- **Infrastructure** — MCP Servers, Prediction Layers, HPC Clusters
+- **Systemic Trust** — Automated Compliance, Self-Diagnosing Agents
+- **Proven Scale** — Sub-50ms Latency at 100M+ Record Volume
 
-## Supabase Setup (Optional)
+## Ecosystem
 
-To enable dynamic writings from Supabase:
+NVIDIA Inception · Anthropic MCP · AWS Activate
 
-1. Create a Supabase project at [supabase.com](https://supabase.com)
-2. Run `supabase/schema.sql` in the SQL Editor
-3. Update `index.html` with your credentials:
+## Links
 
-```javascript
-const SUPABASE_URL = 'https://your-project.supabase.co';
-const SUPABASE_ANON_KEY = 'your-anon-key';
-```
+- [X / Twitter](https://x.com/realariharrison)
+- [Google Scholar](https://scholar.google.com/citations?hl=en&user=O3Bdfh8AAAAJ)
+- [LinkedIn](https://www.linkedin.com/in/realariharrison/)
+- [GitHub](https://github.com/realariharrison)
+- [YouTube](https://www.youtube.com/@AriHarrison1)
 
-Without Supabase configured, the site displays fallback content.
+## Contact
 
-## Local Development
+For inquiries about AI infrastructure, MCP development, or collaboration opportunities.
 
-Just open `index.html` in a browser — no build step required.
+---
 
-## Adding Writings
-
-In Supabase SQL Editor or via the dashboard:
-
-```sql
-INSERT INTO writings (title, slug, excerpt, body, is_published, published_at)
-VALUES (
-  'Your Post Title',
-  'your-post-slug',
-  'A brief excerpt...',
-  'Full markdown body here...',
-  TRUE,
-  NOW()
-);
-```
-
-## License
-
-© 2026 Ari Harrison
+*I define the architecture.*
