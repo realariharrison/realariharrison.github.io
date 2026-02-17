@@ -8,8 +8,8 @@
 <meta property="og:title" content="Ari Harrison — Architect of the Intelligence Layer">
 <meta property="og:description" content="Scaling MCP & AI Orchestration. Defining the Architecture.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ariharrison.github.io">
-<link rel="canonical" href="https://ariharrison.github.io">
+<meta property="og:url" content="https://realariharrison.github.io">
+<link rel="canonical" href="https://realariharrison.github.io">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -750,9 +750,33 @@
 
 <section id="blog">
   <div class="section-label fade-in">Writing</div>
-  <ul class="blog-list" id="blogList">
-    <li class="blog-loading fade-in visible">Loading writings...</li>
+  <ul class="blog-list">
+    <a href="https://novoquantnexus.substack.com/p/why-most-ai-pilots-fail-the-missing" target="_blank" class="blog-item fade-in">
+      <div class="blog-date">2026.02</div>
+      <div>
+        <div class="blog-title">Why Most AI Pilots Fail: The Missing Infrastructure Layer</div>
+        <div class="blog-excerpt">Reasoning is only 10% of the battle. The other 90% is the architectural "bridge" that enables reliable action in regulated domains.</div>
+      </div>
+    </a>
+    <a href="https://novoquantnexus.substack.com/p/scaling-mcp-lessons-from-100m-records" target="_blank" class="blog-item fade-in">
+      <div class="blog-date">2026.01</div>
+      <div>
+        <div class="blog-title">Scaling MCP: Lessons from 100M Records</div>
+        <div class="blog-excerpt">What changes when you shift from query-time computation to prediction infrastructure. A deep dive into sub-50ms latency for agents.</div>
+      </div>
+    </a>
+    <a href="https://novoquantnexus.substack.com/p/from-conversational-to-computational" target="_blank" class="blog-item fade-in">
+      <div class="blog-date">2025.12</div>
+      <div>
+        <div class="blog-title">From Conversational to Computational AI</div>
+        <div class="blog-excerpt">How orchestration layers move models beyond chat interfaces and into high-stakes decision pipelines.</div>
+      </div>
+    </a>
   </ul>
+  <a href="https://substack.com/@ariharrison" target="_blank" class="view-more fade-in">
+    <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+    View All on Substack
+  </a>
 </section>
 
 <section id="videos">
@@ -810,57 +834,19 @@
 </footer>
 <div class="footer-copy">© 2026 Ari Harrison — Architecting the Logic, Not the Machine.</div>
 
-<!-- Supabase JS Client -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <script>
-  // ========================================
-  // CONFIGURATION
-  // ========================================
-  // Replace these with your Supabase credentials
-  const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-  const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
-
-  // Fallback writings data (used when Supabase is not configured)
-  const FALLBACK_WRITINGS = [
-    {
-      published_at: '2026-02-01',
-      title: 'Why Most AI Pilots Fail: The Missing Infrastructure Layer',
-      excerpt: 'Reasoning is only 10% of the battle. The other 90% is the architectural "bridge" that enables reliable action in regulated domains.',
-      slug: 'why-most-ai-pilots-fail'
-    },
-    {
-      published_at: '2026-01-15',
-      title: 'Scaling MCP: Lessons from 100M Records',
-      excerpt: 'What changes when you shift from query-time computation to prediction infrastructure. A deep dive into sub-50ms latency for agents.',
-      slug: 'scaling-mcp-lessons'
-    },
-    {
-      published_at: '2025-12-10',
-      title: 'From Conversational to Computational AI',
-      excerpt: 'How orchestration layers move models beyond chat interfaces and into high-stakes decision pipelines.',
-      slug: 'conversational-to-computational'
-    }
-  ];
-
-  // ========================================
-  // NAV SCROLL EFFECT
-  // ========================================
+  // Nav scroll effect
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
   });
 
-  // ========================================
-  // HAMBURGER MENU
-  // ========================================
+  // Hamburger menu
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
   hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-  // ========================================
-  // SCROLL ANIMATIONS
-  // ========================================
+  // Scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
@@ -871,69 +857,6 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // ========================================
-  // WRITINGS / BLOG - SUPABASE INTEGRATION
-  // ========================================
-  function formatDate(dateStr) {
-    const date = new Date(dateStr);
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    return `${year}.${month}`;
-  }
-
-  function renderWritings(writings) {
-    const blogList = document.getElementById('blogList');
-
-    if (!writings || writings.length === 0) {
-      blogList.innerHTML = '<li class="blog-empty fade-in visible">No writings published yet.</li>';
-      return;
-    }
-
-    blogList.innerHTML = writings.map(post => `
-      <li class="blog-item fade-in visible" ${post.external_url ? `onclick="window.open('${post.external_url}', '_blank')"` : ''}>
-        <div class="blog-date">${formatDate(post.published_at)}</div>
-        <div>
-          <div class="blog-title">${post.title}</div>
-          <div class="blog-excerpt">${post.excerpt || ''}</div>
-        </div>
-      </li>
-    `).join('');
-  }
-
-  async function loadWritings() {
-    // Check if Supabase is configured
-    if (SUPABASE_URL === 'YOUR_SUPABASE_URL' || !SUPABASE_URL || SUPABASE_URL.includes('placeholder')) {
-      console.log('Supabase not configured, using fallback data');
-      renderWritings(FALLBACK_WRITINGS);
-      return;
-    }
-
-    try {
-      const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-      const { data, error } = await supabase
-        .from('writings')
-        .select('*')
-        .eq('is_published', true)
-        .order('published_at', { ascending: false })
-        .limit(10);
-
-      if (error) {
-        console.error('Error fetching writings:', error);
-        renderWritings(FALLBACK_WRITINGS);
-        return;
-      }
-
-      renderWritings(data);
-    } catch (err) {
-      console.error('Failed to load writings:', err);
-      renderWritings(FALLBACK_WRITINGS);
-    }
-  }
-
-  // Load writings on page load
-  loadWritings();
 </script>
 
 </body>
