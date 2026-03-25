@@ -1,0 +1,52 @@
+# Ari Harrison
+
+> Architect of the Intelligence Layer
+
+## About
+
+The gap between foundation models and real decisions is architecture. Not prompts. Not wrappers. Prediction layers over 122M+ indexed compounds, compliance systems that understand jurisdictional complexity, orchestration that gives models the specialized tools they need to move from conversation to computation.
+
+NovoMCP is the intelligence layer. Toxicity. Drug-likeness. Regulatory status. Drug interactions. Pre-computed across 122M+ compounds so AI never waits. Scientists access it through NovoWorkbench. AI agents call it natively via MCP. Dev teams integrate it directly into pipelines. One backend. One credit system. Three surfaces.
+
+NovoWorkbench is the desktop surface. Researchers paste a molecule and get 3D structure, pharmacokinetic predictions, regulatory screening, and AI-optimized analogs — in under 2 seconds. Model-agnostic. Local-first. Signed and notarized by Apple.
+
+Before this: autonomous discovery systems in high-stakes manufacturing — reinforcement learning agents that diagnosed failures and improved without intervention. The work is AI infrastructure. The domain is wherever the stakes are high enough to demand it.
+
+## The Stack
+
+- Intelligence Layer: 122M+ compounds, 84 properties each, sub-50ms
+- Compliance: FAVES — 8 jurisdictions, inline, not bolted on
+- Desktop Surface: NovoWorkbench — local-first, model-agnostic
+- MCP Tools: 26 tools, native Anthropic integration
+- Ecosystem: NVIDIA Inception, Anthropic MCP, AWS Activate
+
+## Publications
+
+- Molecular Targets Shape Reasoning Topology: Bidirectional Validation of Chemistry-Inspired Bond Classification for AI Reasoning Chains (2026, ChemRxiv) — Across 478 reasoning traces from five ADMET endpoints, molecular targets determine AI reasoning topology with large effect sizes (Cohen's d = 0.94 and 1.75, both p < 10^-9). Closes a bidirectional loop: chemistry metaphors explain reasoning structure, and chemistry problems shape reasoning structure. DOI: 10.26434/chemrxiv.15001019/v1
+
+## Projects
+
+- NovoMCP — The Intelligence Layer: 122M+ compounds, pre-computed across 84 properties each. ADMET predictions, FAVES regulatory screening across 8 jurisdictions (DEA, FDA, EPA, CWC, EU REACH) built into the pipeline. Literature, patents, preprints, clinical trials, and bioactivity data in one query. Sub-50ms response. 26 MCP tools. https://www.novoquantnexus.com/novomcp
+
+- NovoWorkbench — The Desktop Surface: Paste a structure, get 3D rendering, pharmacokinetic predictions, regulatory screening across 8 jurisdictions, and AI-optimized structural analogs via NVIDIA MolMIM in under 2 seconds. Model-agnostic (Claude, GPT-5.2, Gemini, local models). Local-first. Signed and notarized by Apple.
+
+- FAVES — Compliance Inline: Three-tier detection system (whitelist matching, direct name resolution, scaffold analysis) screened against 8 jurisdictions before a molecule reaches your team. 100% sensitivity and specificity on a 102-compound benchmark. Published on ChemRxiv.
+
+- Autonomous Orchestration: Reinforcement learning agents in high-stakes manufacturing. Continuous operation. Self-diagnosing on failure. Improving without intervention.
+
+## Writing
+
+- Why Most AI Pilots Fail: The Missing Infrastructure Layer (2026.02)
+- Scaling MCP: Lessons from 122M Compounds (2026.02)
+- From Conversational to Computational AI (2026.02)
+
+Writing available at: https://substack.com/@ariharrison
+
+## Links
+
+- Website: https://realariharrison.github.io
+- X / Twitter: https://x.com/realariharrison
+- Google Scholar: https://scholar.google.com/citations?hl=en&user=O3Bdfh8AAAAJ
+- LinkedIn: https://www.linkedin.com/in/realariharrison
+- GitHub: https://github.com/realariharrison
+- YouTube: https://www.youtube.com/@AriHarrison1

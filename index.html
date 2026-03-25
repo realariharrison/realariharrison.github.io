@@ -1,32 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ari Harrison — Architect of the Intelligence Layer</title>
-<meta name="description" content="I design intelligence infrastructure—the logic layers between foundation models and high-stakes decisions.">
+<meta name="description" content="Intelligence infrastructure. The layer between foundation models and high-stakes decisions.">
 <meta property="og:title" content="Ari Harrison — Architect of the Intelligence Layer">
-<meta property="og:description" content="Scaling MCP & AI Orchestration. Defining the Architecture.">
+<meta property="og:description" content="Intelligence Infrastructure. The Layer Between Models and Decisions.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://realariharrison.github.io">
+<meta property="og:image" content="https://realariharrison.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ari Harrison — Architect of the Intelligence Layer">
+<meta name="twitter:description" content="Intelligence Infrastructure. The Layer Between Models and Decisions.">
+<meta name="twitter:image" content="https://realariharrison.github.io/og-image.png">
 <link rel="canonical" href="https://realariharrison.github.io">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232A2725'/><text x='50' y='68' font-family='Georgia,serif' font-size='42' font-weight='400' fill='%23B8704B' text-anchor='middle'>AH</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
+  /* Dark mode (default) */
   :root {
+    --bg: #1A1816;
+    --bg-warm: #242120;
+    --bg-card-hover: #F5F2EE;
+    --text: #E8E4DF;
+    --text-soft: #B0AAA3;
+    --text-muted: #7A746D;
+    --accent: #D4A88A;
+    --accent-soft: #B8704B;
+    --border: #3A3634;
+    --nav-bg: rgba(26, 24, 22, 0.85);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', Monaco, monospace;
+    --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  /* Light mode */
+  [data-theme="light"] {
     --bg: #F5F2EE;
     --bg-warm: #EDEAE4;
-    --bg-dark: #2A2725;
+    --bg-card-hover: #2A2725;
     --text: #2A2725;
     --text-soft: #5E5954;
     --text-muted: #908A83;
     --accent: #B8704B;
     --accent-soft: #D4A88A;
     --border: #DDD8D1;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'DM Sans', -apple-system, sans-serif;
-    --mono: 'JetBrains Mono', Monaco, monospace;
-    --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --nav-bg: rgba(245, 242, 238, 0.85);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,9 +61,10 @@
     line-height: 1.7;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
+    transition: background 400ms var(--ease), color 400ms var(--ease);
   }
 
-  /* Refined grain for performance */
+  /* Refined grain */
   body::before {
     content: '';
     position: fixed;
@@ -78,9 +100,9 @@
     align-items: center;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    background: rgba(245, 242, 238, 0.85);
+    background: var(--nav-bg);
     border-bottom: 1px solid transparent;
-    transition: border-color 400ms var(--ease);
+    transition: border-color 400ms var(--ease), background 400ms var(--ease);
   }
   nav.scrolled { border-bottom-color: var(--border); }
 
@@ -90,6 +112,12 @@
     font-weight: 400;
     color: var(--text);
     letter-spacing: -0.01em;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
   }
 
   .nav-links {
@@ -118,6 +146,34 @@
   }
   .nav-links a:hover { color: var(--text); }
   .nav-links a:hover::after { width: 100%; }
+
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    transition: all 400ms var(--ease);
+    flex-shrink: 0;
+  }
+  .theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .theme-toggle svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+  .theme-toggle .icon-sun { display: block; }
+  .theme-toggle .icon-moon { display: none; }
+  [data-theme="light"] .theme-toggle .icon-sun { display: none; }
+  [data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
   .hamburger {
     display: none;
@@ -256,6 +312,7 @@
   .about-aside {
     padding: 40px;
     background: var(--bg-warm);
+    transition: background 400ms var(--ease);
   }
 
   .about-aside h3 {
@@ -358,13 +415,13 @@
     display: flex;
     flex-direction: column;
   }
-  .project-card:hover { background: var(--bg-dark); }
+  .project-card:hover { background: var(--bg-card-hover); }
   .project-card:hover .project-tag,
   .project-card:hover .project-name,
   .project-card:hover .project-desc,
   .project-card:hover .project-link { color: var(--bg); }
-  .project-card:hover .project-tag { color: var(--accent-soft); }
-  .project-card:hover .project-link { color: var(--accent-soft); }
+  .project-card:hover .project-tag { color: var(--accent); }
+  .project-card:hover .project-link { color: var(--accent); }
 
   .project-tag {
     font-size: 11px;
@@ -475,7 +532,7 @@
   .video-thumb {
     width: 100%;
     aspect-ratio: 16/9;
-    background: var(--bg-dark);
+    background: var(--bg-warm);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -604,6 +661,7 @@
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
+    .nav-right { gap: 16px; }
 
     .nav-links.open {
       display: flex;
@@ -642,21 +700,27 @@
 
 <nav id="nav">
   <a href="#" class="nav-name">Ari Harrison</a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#blog">Writing</a></li>
-    <li><a href="#videos">Videos</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Writing</a></li>
+      <li><a href="#videos">Videos</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></svg>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <section class="hero" id="hero">
-  <h1 class="fade-in">Scaling MCP &<br>AI Orchestration.<br><em>Defining the Architecture.</em></h1>
-  <p class="hero-sub fade-in">I design intelligence infrastructure—the logic layers between foundation models and high-stakes decisions. Prediction infrastructure, compliance-aware tooling, and orchestration that turns conversation into computation.</p>
+  <h1 class="fade-in">Intelligence Infrastructure.<br><em>The Layer Between Models<br>and Decisions.</em></h1>
+  <p class="hero-sub fade-in">The gap between foundation models and real decisions is architecture. Not prompts. Not wrappers. Prediction layers, compliance-aware tooling, orchestration that turns conversation into computation.</p>
 
   <div class="hero-links fade-in">
     <a href="https://x.com/realariharrison" target="_blank" rel="noopener">
@@ -684,18 +748,18 @@
   <div class="section-label fade-in">About</div>
   <div class="about-content">
     <div class="about-text fade-in">
-      <p>I build intelligence infrastructure—the systems between foundation models and real decisions.</p>
-      <p>AI reasons, but it doesn't act. The gap is <strong>architecture</strong>: prediction layers over massive datasets, compliance systems that adapt to jurisdictional complexity, and orchestration that gives models the specialized tools they need to move from conversation to computation.</p>
-      <p>I close that gap. I specialize in moving AI from "demo" to "production" by building the systems that handle failure, compliance, and scale automatically.</p>
-      <p>My work establishes the blueprint for high-stakes intelligence—100M+ records indexed with pre-computed ML predictions, regulatory compliance across 8 jurisdictions, and production MCP infrastructure running natively in the Anthropic ecosystem. The architecture translates: these patterns are essential wherever precision meets scale.</p>
+      <p>The gap between foundation models and real decisions is architecture. Not prompts. Not wrappers. Prediction layers over 122M+ indexed compounds, compliance systems that understand jurisdictional complexity, orchestration that gives models the specialized tools they need to move from conversation to computation.</p>
+      <p><strong>NovoMCP</strong> is the intelligence layer. Toxicity. Drug-likeness. Regulatory status. Drug interactions. Pre-computed across 122M+ compounds so your AI never waits. Scientists access it through NovoWorkbench. AI agents call it natively via MCP. Dev teams integrate it directly into pipelines. One backend. One credit system. Three surfaces.</p>
+      <p><strong>NovoWorkbench</strong> is the desktop surface. Researchers paste a molecule and get 3D structure, pharmacokinetic predictions, regulatory screening, and AI-optimized analogs — in under 2 seconds. Model-agnostic. Local-first. Signed and notarized by Apple.</p>
+      <p>Before this: autonomous discovery systems in high-stakes manufacturing — reinforcement learning agents that diagnosed failures and improved without intervention. The work is AI infrastructure. The domain is wherever the stakes are high enough to demand it.</p>
     </div>
     <div class="about-aside fade-in">
-      <h3>Outcome Architecture</h3>
+      <h3>The Stack</h3>
       <ul>
-        <li><span>Strategic Focus</span>Standardizing Contextual Intelligence & Orchestration</li>
-        <li><span>Infrastructure</span>MCP Servers, Prediction Layers, HPC Clusters</li>
-        <li><span>Systemic Trust</span>Automated Compliance, Self-Diagnosing Agents</li>
-        <li><span>Proven Scale</span>Sub-50ms Latency at 100M+ Record Volume</li>
+        <li><span>Intelligence Layer</span>122M+ compounds, 84 properties each, sub-50ms</li>
+        <li><span>Compliance</span>FAVES — 8 jurisdictions, inline, not bolted on</li>
+        <li><span>Desktop Surface</span>NovoWorkbench — local-first, model-agnostic</li>
+        <li><span>MCP Tools</span>26 tools, native Anthropic integration</li>
         <li><span>Ecosystem</span>NVIDIA Inception · Anthropic MCP · AWS Activate</li>
       </ul>
     </div>
@@ -708,12 +772,12 @@
     <li class="pub-item fade-in">
       <div class="pub-year">2026</div>
       <div>
-        <div class="pub-title">NovoExpert-1: State-of-the-Art Predictive Modeling via Message-Passing Neural Networks</div>
-        <div class="pub-venue">Scientific Preprint / Google Scholar</div>
+        <div class="pub-title">Molecular Targets Shape Reasoning Topology: Bidirectional Validation of Chemistry-Inspired Bond Classification for AI Reasoning Chains</div>
+        <div class="pub-venue">ChemRxiv Preprint</div>
         <div class="pub-desc">
-          <strong>Key Insight:</strong> Proved that standardized GNN architectures and D-MPNN methods can outperform general-purpose models by <strong>11.4 percentage points</strong> in high-stakes classification tasks. This research defines the framework for High-Precision Predictive Infrastructure applicable to any domain requiring complex relationship mapping.
+          <strong>Key Finding:</strong> Molecular targets determine AI reasoning topology with large effect sizes (Cohen's d = 0.94 and 1.75, both p &lt; 10<sup>−9</sup>). Across 478 reasoning traces from five ADMET endpoints, CYP2D6 reasoning shows significantly more covalent (deductive) bonds while hERG reasoning shows more van der Waals (exploratory) bonds — closing a bidirectional loop where chemistry metaphors explain reasoning structure, and chemistry problems shape it.
         </div>
-        <a href="https://scholar.google.com/citations?hl=en&user=O3Bdfh8AAAAJ" target="_blank" class="pub-link">Read on Scholar →</a>
+        <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15001019/v1" target="_blank" class="pub-link">Read on ChemRxiv →</a>
       </div>
     </li>
   </ul>
@@ -727,24 +791,25 @@
   <div class="project-grid" id="projectGrid">
     <div class="project-card fade-in">
       <div class="project-tag">Production · Infrastructure</div>
-      <div class="project-name">The Intelligence Layer (NovoMCP)</div>
-      <div class="project-desc">A production-grade orchestration framework that bridges foundation models and high-stakes data. Features sub-50ms latency, native MCP integration, and 100M+ entity indexing.</div>
-      <a href="https://novomcp.com" target="_blank" class="project-link">View Documentation →</a>
+      <div class="project-name">NovoMCP — The Intelligence Layer</div>
+      <div class="project-desc">Drug discovery AI has a data problem — not volume, but readiness. NovoMCP changes that. 122M+ compounds, pre-computed across 84 properties each. ADMET predictions, FAVES regulatory screening across 8 jurisdictions — DEA, FDA, EPA, CWC, EU REACH — built into the pipeline, not bolted on after. Literature, patents, preprints, clinical trials, and bioactivity data in one query. Sub-50ms response. 26 MCP tools.</div>
+      <a href="https://www.novoquantnexus.com/novomcp" target="_blank" class="project-link">View Documentation →</a>
     </div>
     <div class="project-card fade-in">
-      <div class="project-tag">Specialized ML · SOTA</div>
-      <div class="project-name">Predictive Logic Engines</div>
-      <div class="project-desc">High-precision message-passing neural networks that establish new SOTA benchmarks. Built for environments where accuracy is non-negotiable and "general" AI falls short.</div>
+      <div class="project-tag">Production · Desktop</div>
+      <div class="project-name">NovoWorkbench — The Desktop Surface</div>
+      <div class="project-desc">Paste a structure. In under 2 seconds: 3D rendering, pharmacokinetic predictions, regulatory screening across 8 jurisdictions, and AI-optimized structural analogs via NVIDIA MolMIM — without model queues, manual compliance checks, or waiting. Model-agnostic. Runs Claude, GPT-5.2, Gemini, or local models. Local-first. Signed and notarized by Apple.</div>
+      <a href="https://novoworkbenchreleases.blob.core.windows.net/releases/NovoWorkbench_1.1.0_arm64.dmg" target="_blank" class="project-link">Download for macOS →</a>
+    </div>
+    <div class="project-card fade-in">
+      <div class="project-tag">Systems · Regulatory</div>
+      <div class="project-name">FAVES — Compliance Inline</div>
+      <div class="project-desc">Compliance at the end of a pipeline is a gate. Compliance inside the pipeline is infrastructure. FAVES is a three-tier detection system — whitelist matching, direct name resolution, scaffold analysis — screened against 8 jurisdictions before a molecule reaches your team. 100% sensitivity and specificity on a 102-compound benchmark. Published on ChemRxiv.</div>
     </div>
     <div class="project-card fade-in">
       <div class="project-tag">Systems · Autonomy</div>
       <div class="project-name">Autonomous Orchestration</div>
-      <div class="project-desc">Reinforcement learning agents designed for continuous, self-improving operation. Capable of self-diagnosis and failure recovery in complex 24/7 discovery cycles.</div>
-    </div>
-    <div class="project-card fade-in">
-      <div class="project-tag">Strategic · Compliance</div>
-      <div class="project-name">Regulatory Compliance Engine</div>
-      <div class="project-desc">Automated, programmatic enforcement of multi-jurisdictional logic across 8 global frameworks. Built directly into the tool-use layer for guaranteed safety.</div>
+      <div class="project-desc">Before NovoMCP: reinforcement learning agents in high-stakes manufacturing environments. Continuous operation. Self-diagnosing on failure. Improving without intervention. The architectural pattern is the same — agents that pursue objectives, not just answer questions. The domain changed. The infrastructure thinking didn't.</div>
     </div>
   </div>
 </section>
@@ -752,30 +817,27 @@
 <section id="blog">
   <div class="section-label fade-in">Writing</div>
   <ul class="blog-list">
-    <li class="blog-item fade-in">
+    <a href="https://novoquantnexus.substack.com/p/why-most-ai-pilots-fail-the-missing" target="_blank" class="blog-item fade-in">
       <div class="blog-date">2026.02</div>
       <div>
         <div class="blog-title">Why Most AI Pilots Fail: The Missing Infrastructure Layer</div>
         <div class="blog-excerpt">Reasoning is only 10% of the battle. The other 90% is the architectural "bridge" that enables reliable action in regulated domains.</div>
-        <a href="https://novoquantnexus.substack.com/p/why-most-ai-pilots-fail-the-missing" target="_blank" class="pub-link">Read on Substack →</a>
       </div>
-    </li>
-    <li class="blog-item fade-in">
+    </a>
+    <a href="https://novoquantnexus.substack.com/p/scaling-mcp-lessons-from-100m-records" target="_blank" class="blog-item fade-in">
       <div class="blog-date">2026.02</div>
       <div>
-        <div class="blog-title">Scaling MCP: Lessons from 100M Records</div>
+        <div class="blog-title">Scaling MCP: Lessons from 122M Compounds</div>
         <div class="blog-excerpt">What changes when you shift from query-time computation to prediction infrastructure. A deep dive into sub-50ms latency for agents.</div>
-        <a href="https://novoquantnexus.substack.com/p/scaling-mcp-lessons-from-100m-records" target="_blank" class="pub-link">Read on Substack →</a>
       </div>
-    </li>
-    <li class="blog-item fade-in">
+    </a>
+    <a href="https://novoquantnexus.substack.com/p/from-conversational-to-computational" target="_blank" class="blog-item fade-in">
       <div class="blog-date">2026.02</div>
       <div>
         <div class="blog-title">From Conversational to Computational AI</div>
         <div class="blog-excerpt">How orchestration layers move models beyond chat interfaces and into high-stakes decision pipelines.</div>
-        <a href="https://novoquantnexus.substack.com/p/from-conversational-to-computational" target="_blank" class="pub-link">Read on Substack →</a>
       </div>
-    </li>
+    </a>
   </ul>
   <a href="https://substack.com/@ariharrison" target="_blank" class="view-more fade-in">
     <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
@@ -788,6 +850,7 @@
   <div class="video-grid" id="videoGrid">
     <a href="https://youtu.be/CfhlqyE-DKY" target="_blank" class="video-card fade-in">
       <div class="video-thumb">
+        <img src="img/enterprise_mcp.png" alt="Enterprise MCP" loading="lazy">
         <div class="video-play">
           <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
         </div>
@@ -799,6 +862,7 @@
     </a>
     <a href="https://youtu.be/TpJLnVJhb0Y" target="_blank" class="video-card fade-in">
       <div class="video-thumb">
+        <img src="img/agentic_infrastructure.png" alt="Agentic Infrastructure" loading="lazy">
         <div class="video-play">
           <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
         </div>
@@ -810,6 +874,7 @@
     </a>
     <a href="https://youtu.be/ocnLDzottfA" target="_blank" class="video-card fade-in">
       <div class="video-thumb">
+        <img src="img/cli_vs_mcp.png" alt="CLI vs MCP" loading="lazy">
         <div class="video-play">
           <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
         </div>
@@ -839,6 +904,24 @@
 <div class="footer-copy">© 2026 Ari Harrison — Architecting the Logic, Not the Machine.</div>
 
 <script>
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+
+  function setTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
+
+  // Load saved preference (default: dark)
+  const saved = localStorage.getItem('theme');
+  if (saved) setTheme(saved);
+
+  themeToggle.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
   // Nav scroll effect
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
