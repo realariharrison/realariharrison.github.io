@@ -2,16 +2,20 @@
 
 **Architect of the Intelligence Layer**
 
-I design intelligence infrastructure—the logic layers between foundation models and high-stakes decisions. Prediction infrastructure, compliance-aware tooling, and orchestration that turns conversation into computation.
+The gap between foundation models and real decisions is architecture. Not prompts. Not wrappers. Prediction layers over 122M+ indexed compounds, compliance systems that understand jurisdictional complexity, orchestration that turns conversation into computation.
 
-## What I Do
+## Products
 
-I close the gap between AI reasoning and real-world action. I specialize in moving AI from "demo" to "production" by building the systems that handle failure, compliance, and scale automatically.
+- **NovoMCP** — The intelligence layer. 122M+ compounds, 84 properties each, sub-50ms. 26 MCP tools. [Documentation](https://www.novoquantnexus.com/novomcp)
+- **NovoWorkbench** — The desktop surface. 3D structure, pharmacokinetic predictions, regulatory screening, AI-optimized analogs in under 2 seconds. Model-agnostic. Local-first.
+- **FAVES** — Compliance inline. Three-tier detection across 8 jurisdictions. 100% sensitivity/specificity on 102-compound benchmark. [Published on ChemRxiv](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15001019/v1)
 
-- **Strategic Focus** — Standardizing Contextual Intelligence & Orchestration
-- **Infrastructure** — MCP Servers, Prediction Layers, HPC Clusters
-- **Systemic Trust** — Automated Compliance, Self-Diagnosing Agents
-- **Proven Scale** — Sub-50ms Latency at 100M+ Record Volume
+## The Stack
+
+- **Intelligence Layer** — 122M+ compounds, 84 properties each, sub-50ms
+- **Compliance** — FAVES, 8 jurisdictions, inline
+- **Desktop Surface** — NovoWorkbench, local-first, model-agnostic
+- **MCP Tools** — 26 tools, native Anthropic integration
 
 ## Ecosystem
 
@@ -24,11 +28,8 @@ NVIDIA Inception · Anthropic MCP · AWS Activate
 - [LinkedIn](https://www.linkedin.com/in/realariharrison/)
 - [GitHub](https://github.com/realariharrison)
 - [YouTube](https://www.youtube.com/@AriHarrison1)
-
-## Contact
-
-For inquiries about AI infrastructure, MCP development, or collaboration opportunities.
+- [Writing](https://substack.com/@ariharrison)
 
 ---
 
-*I define the architecture.*
+*Architecting the Logic, Not the Machine.*
