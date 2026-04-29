@@ -6,23 +6,26 @@ The gap between foundation models and real decisions is architecture. Not prompt
 
 ## Products
 
-- **NovoMCP** — The intelligence layer. 122M+ compounds, 84 properties each, sub-50ms. 26 MCP tools. [Documentation](https://www.novoquantnexus.com/novomcp)
+- **Novo** — The cloud platform. 122M+ compounds, 84 properties each, sub-50ms. 37 discovery tools. [Product page](https://novomcp.com/novo)
+- **Novo Compute** — The compute engine. GPU docking, MD, QM, NNP, materials science. 27 tools. [Product page](https://novomcp.com/novo-compute)
 - **NovoWorkbench** — The desktop surface. 3D structure, pharmacokinetic predictions, regulatory screening, AI-optimized analogs in under 2 seconds. Model-agnostic. Local-first.
-- **FAVES** — Compliance inline. Three-tier detection across 8 jurisdictions. 100% sensitivity/specificity on 102-compound benchmark. [Published on ChemRxiv](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15001019/v1)
+- **FAVES V4** — Compliance inline. Three-tier detection, 1,585 structural alerts, 8 jurisdictions. 100% sensitivity/specificity on 102-compound benchmark.
 
 ## The Stack
 
 - **Intelligence Layer** — 122M+ compounds, 84 properties each, sub-50ms
-- **Compliance** — FAVES, 8 jurisdictions, inline
+- **Compliance** — FAVES V4, 8 jurisdictions, 1,585 structural alerts
+- **MCP Tools** — 62 tools across 2 servers (Novo + Novo Compute)
+- **Verticals** — Drug discovery + materials science
 - **Desktop Surface** — NovoWorkbench, local-first, model-agnostic
-- **MCP Tools** — 26 tools, native Anthropic integration
 
 ## Ecosystem
 
-NVIDIA Inception · Anthropic MCP · AWS Activate
+NVIDIA Inception · AWS Activate · Microsoft Founders Hub
 
 ## Links
 
+- [NovoMCP](https://novomcp.com)
 - [X / Twitter](https://x.com/realariharrison)
 - [Google Scholar](https://scholar.google.com/citations?hl=en&user=O3Bdfh8AAAAJ)
 - [LinkedIn](https://www.linkedin.com/in/realariharrison/)

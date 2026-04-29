@@ -29,7 +29,7 @@ Before this: autonomous discovery systems in high-stakes manufacturing — reinf
 
 ## Projects
 
-- NovoMCP + Novo Compute: 62 tools across two MCP servers. NovoMCP handles discovery intelligence — 122M+ compounds, ADMET predictions, FAVES V4 compliance, research search, lead optimization, funnel orchestration. Novo Compute handles simulation — GPU docking, GROMACS MD, quantum chemistry, neural network potentials, structure prediction, materials science. https://www.novoquantnexus.com/novomcp / https://www.novoquantnexus.com/novo-compute
+- NovoMCP + Novo Compute: 62 tools across two MCP servers. NovoMCP handles discovery intelligence — 122M+ compounds, ADMET predictions, FAVES V4 compliance, research search, lead optimization, funnel orchestration. Novo Compute handles simulation — GPU docking, GROMACS MD, quantum chemistry, neural network potentials, structure prediction, materials science. https://novomcp.com/novo / https://novomcp.com/novo-compute
 
 - NovoWorkbench — The Desktop Surface: 3D rendering, pharmacokinetic predictions, regulatory screening, AI-optimized analogs in under 2 seconds. Model-agnostic. Local-first. Apple signed/notarized.
 
@@ -47,7 +47,7 @@ Writing available at: https://substack.com/@ariharrison
 ## Links
 
 - Website: https://realariharrison.github.io
-- NovoQuantNexus: https://novoquantnexus.com
+- NovoMCP: https://novomcp.com
 - X / Twitter: https://x.com/realariharrison
 - Google Scholar: https://scholar.google.com/citations?hl=en&user=O3Bdfh8AAAAJ
 - LinkedIn: https://www.linkedin.com/in/realariharrison
