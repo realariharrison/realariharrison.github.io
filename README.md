@@ -1,21 +1,21 @@
 # Ari Harrison
 
-**Architect of the Intelligence Layer**
+**Architect of the Engine Between Models and Decisions**
 
-The gap between foundation models and real decisions is architecture. Not prompts. Not wrappers. Prediction layers over 122M+ indexed compounds, compliance systems that understand jurisdictional complexity, orchestration that turns conversation into computation.
+The gap between foundation models and real decisions is architecture. Not prompts. Not wrappers. Prediction layers over 122M+ indexed compounds, compliance systems that understand jurisdictional complexity, an engine that turns conversation into computation.
 
 ## Products
 
-- **Novo** — The cloud platform. 122M+ compounds, 84 properties each, sub-50ms. 37 discovery tools. [Product page](https://novomcp.com/novo)
-- **Novo Compute** — The compute engine. GPU docking, MD, QM, NNP, materials science. 27 tools. [Product page](https://novomcp.com/novo-compute)
+- **Novo** — The cloud platform. 122M+ compounds, 100+ properties each, sub-50ms. 42 discovery tools. [Product page](https://novomcp.com/novo)
+- **Novo Compute** — The compute engine. GPU docking, MD, QM, NNP, materials science. 40 tools. [Product page](https://novomcp.com/novo-compute)
 - **NovoWorkbench** — The desktop surface. 3D structure, pharmacokinetic predictions, regulatory screening, AI-optimized analogs in under 2 seconds. Model-agnostic. Local-first.
 - **FAVES V4** — Compliance inline. Three-tier detection, 1,585 structural alerts, 8 jurisdictions. 100% sensitivity/specificity on 102-compound benchmark.
 
 ## The Stack
 
-- **Intelligence Layer** — 122M+ compounds, 84 properties each, sub-50ms
+- **The Engine** — 122M+ compounds, 100+ properties each, sub-50ms
 - **Compliance** — FAVES V4, 8 jurisdictions, 1,585 structural alerts
-- **MCP Tools** — 62 tools across 2 servers (Novo + Novo Compute)
+- **MCP Tools** — 69 tools across 2 servers (Novo + Novo Compute)
 - **Verticals** — Drug discovery + materials science
 - **Desktop Surface** — NovoWorkbench, local-first, model-agnostic
 
