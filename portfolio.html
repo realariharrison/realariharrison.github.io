@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ari Harrison — Portfolio · One Engine, Six Surfaces</title>
-<meta name="description" content="Product portfolio: six surfaces over one computational chemistry engine — MCP, REST API, desktop + cloud workbench, Chrome extension, Word add-in, dashboard. The problem, the decision, the build, the outcome for each.">
-<meta property="og:title" content="Ari Harrison — Portfolio · One Engine, Six Surfaces">
-<meta property="og:description" content="Six product surfaces shipped against one computational chemistry engine. Problem, decision, build, outcome — for each.">
+<title>Ari Harrison, Portfolio · One Engine, Six Surfaces</title>
+<meta name="description" content="Product portfolio: six surfaces over one computational chemistry engine, MCP, REST API, desktop + cloud workbench, Chrome extension, Word add-in, dashboard. The problem, the decision, the build, the outcome for each.">
+<meta property="og:title" content="Ari Harrison, Portfolio · One Engine, Six Surfaces">
+<meta property="og:description" content="Six product surfaces shipped against one computational chemistry engine. Problem, decision, build, outcome, for each.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://realariharrison.github.io/portfolio.html">
 <meta property="og:image" content="https://realariharrison.github.io/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ari Harrison — Portfolio · One Engine, Six Surfaces">
+<meta name="twitter:title" content="Ari Harrison, Portfolio · One Engine, Six Surfaces">
 <meta name="twitter:description" content="Six product surfaces shipped against one computational chemistry engine.">
 <meta name="twitter:image" content="https://realariharrison.github.io/og-image.png">
 <link rel="canonical" href="https://realariharrison.github.io/portfolio.html">
@@ -70,7 +70,7 @@
   a { color: var(--accent); text-decoration: none; transition: color 400ms var(--ease); }
   a:hover { color: var(--text); }
 
-  /* NAV — identical to index.html */
+  /* NAV, identical to index.html */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     padding: 20px 48px;
@@ -312,7 +312,7 @@
     color: var(--text-muted);
   }
 
-  /* PROOF CALLOUT — used inside case studies for high-signal evidence
+  /* PROOF CALLOUT, used inside case studies for high-signal evidence
      (e.g. production MCP deployment under the MCP case). Visually anchored
      by the accent border so it reads as the load-bearing detail. */
   .case-proof {
@@ -381,7 +381,7 @@
     color: var(--text-muted);
   }
 
-  /* OPEN SOURCE SECTION — single-feature spotlight (NovoMD) */
+  /* OPEN SOURCE SECTION, single-feature spotlight (NovoMD) */
   .oss-block {
     background: var(--bg-warm);
     border: 1px solid var(--border);
@@ -547,7 +547,7 @@
   }
   .cta-links a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
-  /* FOOTER — same as index */
+  /* FOOTER, same as index */
   footer {
     padding: 80px 48px 40px;
     max-width: 1100px;
@@ -639,7 +639,7 @@
 
 <section class="hero">
   <h1 class="fade-in">One Engine.<br><em>Six Surfaces.</em></h1>
-  <p class="hero-sub fade-in">Product portfolio for NovoMCP — a computational chemistry engine that ships against six different user surfaces, on one account, one credit pool, one audit trail. Each surface below is its own product decision: where it lives, who it's for, what trade-off it pays. The problem, the call, the build, the outcome.</p>
+  <p class="hero-sub fade-in">Product portfolio for NovoMCP, a computational chemistry engine that ships against six different user surfaces, on one account, one credit pool, one audit trail. Each surface below is its own product decision: where it lives, who it's for, what trade-off it pays. The problem, the call, the build, the outcome.</p>
   <div class="hero-meta fade-in">
     <span><strong>6</strong> shipping surfaces</span>
     <span><strong>69</strong> tools in catalog</span>
@@ -652,7 +652,7 @@
   <div class="thesis-inner fade-in">
     Every surface is <b>a door into the same engine</b>, not a separate product.
     Start in Claude, continue in the browser, batch from the API, review in the
-    dashboard — same account the whole way through.
+    dashboard, same account the whole way through.
   </div>
 </div>
 
@@ -660,31 +660,31 @@
 <article class="case fade-in">
   <header class="case-head">
     <div>
-      <div class="case-tag">01 · MCP connector — AI assistants</div>
-      <h1 class="case-title">Novo &amp; Novo Compute — <em>the chat surface.</em></h1>
+      <div class="case-tag">01 · MCP connector · AI assistants</div>
+      <h1 class="case-title">Novo &amp; Novo Compute. <em>The chat surface.</em></h1>
     </div>
     <span class="case-status live">Live</span>
   </header>
-  <p class="case-oneliner">Add Novo to Claude, ChatGPT, Gemini, or Cursor and run the full discovery funnel in chat — with human-in-the-loop confirmation at each stage.</p>
+  <p class="case-oneliner">Add Novo to Claude, ChatGPT, Gemini, or Cursor and run the full discovery funnel in chat, with human-in-the-loop confirmation at each stage.</p>
 
   <div class="case-grid">
     <div class="case-cell">
       <h3>The Problem</h3>
-      <p>Chemists already live in Claude and ChatGPT. Asking them to leave their assistant for a separate product is adoption death. But "an MCP server" is also not a product — it's a protocol. The product call is what you ship through it.</p>
+      <p>Chemists already live in Claude and ChatGPT. Asking them to leave their assistant for a separate product is adoption death. But "an MCP server" is also not a product, it's a protocol. The product call is what you ship through it.</p>
     </div>
     <div class="case-cell">
       <h3>The Decision</h3>
       <p><strong>Two MCP servers, not one.</strong> <code>Novo</code> exposes core tools and is available on every tier including the free preview; <code>Novo Compute</code> exposes paid GPU/quantum tools and is paid-only. Different API key prefixes (<code>nmcp_</code> vs <code>ncmcp_</code>) so a leaked core key cannot burn GPU budget.</p>
-      <p>Same Docker image, one env flag (<code>NOVO_SERVER_MODE</code>) toggles the tool catalog — zero duplicated code, separate governance surface.</p>
+      <p>Same Docker image, one env flag (<code>NOVO_SERVER_MODE</code>) toggles the tool catalog, zero duplicated code, separate governance surface.</p>
     </div>
     <div class="case-cell">
       <h3>The Build</h3>
       <p>FastAPI MCP server, OAuth + RFC 8693 token exchange (separate <code>novomcp-auth</code> service), Redis-cached key validation with 5-min TTL and an in-memory fallback so dashboard outages don't take MCP down.</p>
-      <p>Funnel stages use MCP elicitation so the assistant prompts the user at each gate — never silent autonomy on someone else's compounds.</p>
+      <p>Funnel stages use MCP elicitation so the assistant prompts the user at each gate, never silent autonomy on someone else's compounds.</p>
     </div>
     <div class="case-cell">
       <h3>The Outcome</h3>
-      <p>Live on Claude AI, Claude Code, Cursor, ChatGPT (Plus / Pro / Business), and Gemini. <strong>69 tools</strong> exposed across the two servers — ADMET, FAVES compliance, docking, MD, FEP, QM, materials.</p>
+      <p>Live on Claude AI, Claude Code, Cursor, ChatGPT (Plus / Pro / Business), and Gemini. <strong>69 tools</strong> exposed across the two servers, ADMET, FAVES compliance, docking, MD, FEP, QM, materials.</p>
       <p>Hosts: <code>ai.novomcp.com</code> · <code>compute.novomcp.com</code>.</p>
     </div>
   </div>
@@ -714,22 +714,22 @@
 <article class="case fade-in">
   <header class="case-head">
     <div>
-      <div class="case-tag">02 · REST API — your own code</div>
-      <h1 class="case-title">api.novomcp.com — <em>bring your own model.</em></h1>
+      <div class="case-tag">02 · REST API · your own code</div>
+      <h1 class="case-title">api.novomcp.com. <em>Bring your own model.</em></h1>
     </div>
     <span class="case-status live">Live</span>
   </header>
-  <p class="case-oneliner">Call any of the 69 tools from your own code — or wire them into your own agent. Single REST surface, OpenAPI 3.1 as source of truth.</p>
+  <p class="case-oneliner">Call any of the 69 tools from your own code, or wire them into your own agent. Single REST surface, OpenAPI 3.1 as source of truth.</p>
 
   <div class="case-grid">
     <div class="case-cell">
       <h3>The Problem</h3>
-      <p>Some teams already have their own AI agent, their own automation, their own pipeline. They don't want OAuth flows, they don't want MCP — they want a Bearer key and a JSON body.</p>
+      <p>Some teams already have their own AI agent, their own automation, their own pipeline. They don't want OAuth flows, they don't want MCP, they want a Bearer key and a JSON body.</p>
     </div>
     <div class="case-cell">
       <h3>The Decision</h3>
-      <p><strong>One endpoint shape, not 69 of them.</strong> Every tool is <code>POST /v1/tools/{name}</code> with a Bearer key — no bespoke per-tool routes to design, document, or version. The tool catalog <em>is</em> the OpenAPI 3.1 spec, served live; there are no separate docs to drift.</p>
-      <p>Same backend (<code>quanta-mcp</code>) serves MCP and REST — zero code duplicated for the second surface.</p>
+      <p><strong>One endpoint shape, not 69 of them.</strong> Every tool is <code>POST /v1/tools/{name}</code> with a Bearer key, no bespoke per-tool routes to design, document, or version. The tool catalog <em>is</em> the OpenAPI 3.1 spec, served live; there are no separate docs to drift.</p>
+      <p>Same backend (<code>quanta-mcp</code>) serves MCP and REST, zero code duplicated for the second surface.</p>
     </div>
     <div class="case-cell">
       <h3>The Build</h3>
@@ -737,7 +737,7 @@
     </div>
     <div class="case-cell">
       <h3>The Outcome</h3>
-      <p>Live. Engineers who don't want to talk to a chat assistant can curl their way to ADMET in one command. The OpenAPI spec also feeds custom GPTs, agent frameworks, and Postman collections — same engine, no maintenance.</p>
+      <p>Live. Engineers who don't want to talk to a chat assistant can curl their way to ADMET in one command. The OpenAPI spec also feeds custom GPTs, agent frameworks, and Postman collections, same engine, no maintenance.</p>
     </div>
   </div>
 
@@ -752,12 +752,12 @@
 <article class="case fade-in">
   <header class="case-head">
     <div>
-      <div class="case-tag">03 · Workstation — NovoWorkbench</div>
-      <h1 class="case-title">One workbench, <em>two runtimes.</em></h1>
+      <div class="case-tag">03 · Workstation · NovoWorkbench</div>
+      <h1 class="case-title">One workbench. <em>Two runtimes.</em></h1>
     </div>
     <span class="case-status live">Live</span>
   </header>
-  <p class="case-oneliner">The full engine as a workstation. Molecule canvas, 3D viewers, the discovery funnel — run it on the desktop for local files and offline screening, or in the browser with nothing to install.</p>
+  <p class="case-oneliner">The full engine as a workstation. Molecule canvas, 3D viewers, the discovery funnel. Run it on the desktop for local files and offline screening, or in the browser with nothing to install.</p>
 
   <div class="case-grid">
     <div class="case-cell">
@@ -766,8 +766,8 @@
     </div>
     <div class="case-cell">
       <h3>The Decision</h3>
-      <p><strong>One workbench, two runtimes — not two workbenches.</strong> Same canvas, same viewers, same funnel; desktop adds local files and offline screening, cloud adds zero-install and instant updates. <strong>One account, one credit balance across both.</strong></p>
-      <p>Auto-update points existing installs at AWS S3 — current users keep their version intact through the cloud migration, no version regression.</p>
+      <p><strong>One workbench, two runtimes, not two workbenches.</strong> Same canvas, same viewers, same funnel; desktop adds local files and offline screening, cloud adds zero-install and instant updates. <strong>One account, one credit balance across both.</strong></p>
+      <p>Auto-update points existing installs at AWS S3, current users keep their version intact through the cloud migration, no version regression.</p>
     </div>
     <div class="case-cell">
       <h3>The Build</h3>
@@ -776,7 +776,7 @@
     </div>
     <div class="case-cell">
       <h3>The Outcome</h3>
-      <p>v1.3.2 live on Apple Silicon — 37 MB compressed, 111 MB installed. Migrated off Azure Blob mid-2026 with zero customer-visible downtime; signatures preserved, auto-update path swept clean of stale URLs and orphan builds.</p>
+      <p>v1.3.2 live on Apple Silicon, 37 MB compressed, 111 MB installed. Migrated off Azure Blob mid-2026 with zero customer-visible downtime; signatures preserved, auto-update path swept clean of stale URLs and orphan builds.</p>
       <p>Cloud runtime live at <code>app.novomcp.com/workbench</code>.</p>
     </div>
   </div>
@@ -793,12 +793,12 @@
 <article class="case fade-in">
   <header class="case-head">
     <div>
-      <div class="case-tag">04 · Browser — Chrome extension</div>
-      <h1 class="case-title">Hover any SMILES, <em>get the profile.</em></h1>
+      <div class="case-tag">04 · Browser · Chrome extension</div>
+      <h1 class="case-title">Hover any SMILES. <em>Get the profile.</em></h1>
     </div>
     <span class="case-status live">Live</span>
   </header>
-  <p class="case-oneliner">Profile cards on PubChem, ChEMBL, and preprints. ADMET, FAVES compliance, similarity search across 100M+ molecules — without leaving the page you're already on.</p>
+  <p class="case-oneliner">Profile cards on PubChem, ChEMBL, and preprints. ADMET, FAVES compliance, similarity search across 100M+ molecules, without leaving the page you're already on.</p>
 
   <div class="case-grid">
     <div class="case-cell">
@@ -807,8 +807,8 @@
     </div>
     <div class="case-cell">
       <h3>The Decision</h3>
-      <p><strong>Show value before asking for a login.</strong> Hover-card profiling runs against the free tier of the engine — no account required for the basic ADMET / compliance read. The upgrade path is the side-panel "advanced compute" tab and a "Continue in AI" deep-link.</p>
-      <p>Whitelisted hosts only (no opportunistic SMILES detection across the open web) — a privacy and safety call, not a technical one.</p>
+      <p><strong>Show value before asking for a login.</strong> Hover-card profiling runs against the free tier of the engine, no account required for the basic ADMET / compliance read. The upgrade path is the side-panel "advanced compute" tab and a "Continue in AI" deep-link.</p>
+      <p>Whitelisted hosts only (no opportunistic SMILES detection across the open web), a privacy and safety call, not a technical one.</p>
     </div>
     <div class="case-cell">
       <h3>The Build</h3>
@@ -831,26 +831,26 @@
 <article class="case fade-in">
   <header class="case-head">
     <div>
-      <div class="case-tag">05 · Editor — Word add-in</div>
+      <div class="case-tag">05 · Editor · Word add-in</div>
       <h1 class="case-title">Profile SMILES <em>where you write.</em></h1>
     </div>
     <span class="case-status">Private beta</span>
   </header>
-  <p class="case-oneliner">Manuscripts, protocols, grants, regulatory writeups. SMILES detected anywhere in the document, profile cards in the task pane, ADMET + FAVES tables inserted as formatted Word tables — without leaving the editor.</p>
+  <p class="case-oneliner">Manuscripts, protocols, grants, regulatory writeups. SMILES detected anywhere in the document, profile cards in the task pane, ADMET + FAVES tables inserted as formatted Word tables, without leaving the editor.</p>
 
   <div class="case-grid">
     <div class="case-cell">
       <h3>The Problem</h3>
-      <p>The pharma writeup happens in Word — grants, IND sections, protocols, manuscripts. Compounds get pasted in early and never get profiled until much later, often after review. By then the wrong number is everywhere.</p>
+      <p>The pharma writeup happens in Word, grants, IND sections, protocols, manuscripts. Compounds get pasted in early and never get profiled until much later, often after review. By then the wrong number is everywhere.</p>
     </div>
     <div class="case-cell">
       <h3>The Decision</h3>
-      <p><strong>Inline, but private-beta first.</strong> The hard part isn't detecting SMILES in Word — it's the UX of an inline AI assistant that doesn't get in the way. Shipping via AppStore-style review locks in a UX before validation; sideload during beta keeps the iteration loop fast.</p>
+      <p><strong>Inline, but private-beta first.</strong> The hard part isn't detecting SMILES in Word, it's the UX of an inline AI assistant that doesn't get in the way. Shipping via AppStore-style review locks in a UX before validation; sideload during beta keeps the iteration loop fast.</p>
       <p>Insert-as-table (not just preview) so the screening result becomes part of the document, not a sidebar fact.</p>
     </div>
     <div class="case-cell">
       <h3>The Build</h3>
-      <p>Office.js add-in. Manifest hosted statically at <code>addin.novomcp.com</code> (S3 + CloudFront + ACM, SSE-KMS-encrypted bucket with an explicit CloudFront <code>kms:Decrypt</code> grant on the CMK — a real gotcha that 403s the manifest silently if missed).</p>
+      <p>Office.js add-in. Manifest hosted statically at <code>addin.novomcp.com</code> (S3 + CloudFront + ACM, SSE-KMS-encrypted bucket with an explicit CloudFront <code>kms:Decrypt</code> grant on the CMK, a real gotcha that 403s the manifest silently if missed).</p>
     </div>
     <div class="case-cell">
       <h3>The Outcome</h3>
@@ -869,12 +869,12 @@
 <article class="case fade-in">
   <header class="case-head">
     <div>
-      <div class="case-tag">06 · Control room — Dashboard</div>
-      <h1 class="case-title">app.novomcp.com — <em>the spine.</em></h1>
+      <div class="case-tag">06 · Control room · Dashboard</div>
+      <h1 class="case-title">app.novomcp.com. <em>The spine.</em></h1>
     </div>
     <span class="case-status live">Live</span>
   </header>
-  <p class="case-oneliner">Where every surface authenticates. Sign up, mint and revoke API keys, watch credit usage and billing, monitor MD/FEP jobs, resolve file uploads — and run the cloud workbench.</p>
+  <p class="case-oneliner">Where every surface authenticates. Sign up, mint and revoke API keys, watch credit usage and billing, monitor MD/FEP jobs, resolve file uploads, and run the cloud workbench.</p>
 
   <div class="case-grid">
     <div class="case-cell">
@@ -883,8 +883,8 @@
     </div>
     <div class="case-cell">
       <h3>The Decision</h3>
-      <p><strong>The dashboard is not a surface — it's the spine.</strong> No chemistry happens here. It's the auth + billing + observability layer every other surface depends on, plus the lightest possible scientific surface (the cloud workbench) so a curious user lands on something they can actually <em>use</em>.</p>
-      <p>One audit log, one credit ledger, one notification preference set — surfaces don't get to fragment it.</p>
+      <p><strong>The dashboard is not a surface, it's the spine.</strong> No chemistry happens here. It's the auth + billing + observability layer every other surface depends on, plus the lightest possible scientific surface (the cloud workbench) so a curious user lands on something they can actually <em>use</em>.</p>
+      <p>One audit log, one credit ledger, one notification preference set, surfaces don't get to fragment it.</p>
     </div>
     <div class="case-cell">
       <h3>The Build</h3>
@@ -893,7 +893,7 @@
     </div>
     <div class="case-cell">
       <h3>The Outcome</h3>
-      <p>Live. Handles auth for all six surfaces. Credit usage, billing, recent activity, MD/FEP job tracking — all surface-agnostic. New surfaces plug into the same identity and billing path; the dashboard is what makes "one engine, six surfaces" mean one bill, not six.</p>
+      <p>Live. Handles auth for all six surfaces. Credit usage, billing, recent activity, MD/FEP job tracking, all surface-agnostic. New surfaces plug into the same identity and billing path; the dashboard is what makes "one engine, six surfaces" mean one bill, not six.</p>
     </div>
   </div>
 
@@ -908,14 +908,14 @@
   <div class="section-label fade-in">Also shipping · Open source</div>
   <div class="oss-block fade-in">
     <div class="oss-tag">MIT · Local-first · MCP + CLI + Library + REST</div>
-    <h2 class="oss-title">NovoMD &mdash; <em>same multi-surface idea, smaller scope, fully open.</em></h2>
-    <p class="oss-lede">Turns a SMILES string into 32+ molecular descriptors from a 3D conformer &mdash; geometry, energy, electrostatics, surface, volume. Runs on your own machine, no account, no API key. The same one-engine-many-surfaces pattern as NovoMCP, applied at library scale, in the open.</p>
+    <h2 class="oss-title">NovoMD. <em>Same multi-surface idea, smaller scope, fully open.</em></h2>
+    <p class="oss-lede">Turns a SMILES string into 32+ molecular descriptors from a 3D conformer, geometry, energy, electrostatics, surface, volume. Runs on your own machine, no account, no API key. The same one-engine-many-surfaces pattern as NovoMCP, applied at library scale, in the open.</p>
 
     <div class="oss-runtimes">
       <div class="oss-runtime">
         <div class="oss-runtime-name">Python library</div>
         <div class="oss-runtime-cmd">pip install novomd</div>
-        <div class="oss-runtime-note"><code>calculate_properties("CCO")</code> — RDKit, NumPy, SciPy install automatically.</div>
+        <div class="oss-runtime-note"><code>calculate_properties("CCO")</code>, RDKit, NumPy, SciPy install automatically.</div>
       </div>
       <div class="oss-runtime">
         <div class="oss-runtime-name">CLI</div>
@@ -934,7 +934,7 @@
       </div>
     </div>
 
-    <p class="oss-discipline"><strong>The design call: scope discipline.</strong> NovoMD computes descriptors and stops there &mdash; no ADMET, no pKa, no binding affinity, no solubility predictions. That boundary is documented in the README and shipped as an <em>agent skill</em> so AI assistants are told explicitly where the tool's authority ends. Determinism guarantee on top: same SMILES, identical descriptors, any machine.</p>
+    <p class="oss-discipline"><strong>The design call: scope discipline.</strong> NovoMD computes descriptors and stops there, no ADMET, no pKa, no binding affinity, no solubility predictions. That boundary is documented in the README and shipped as an <em>agent skill</em> so AI assistants are told explicitly where the tool's authority ends. Determinism guarantee on top: same SMILES, identical descriptors, any machine.</p>
 
     <div class="oss-foot">
       <span class="oss-foot-label">Open source &rarr;</span>
@@ -952,8 +952,8 @@
   <div class="decisions">
     <div class="decision fade-in">
       <h3>Engine-first language</h3>
-      <p>"Computational chemistry engine" — not platform, OS, substrate, operating layer, or orchestration. Those nouns collide with every competitor in the category. The diagnostic test on every public line: could a competitor put this exact sentence on their homepage unchanged? If yes, replace the noun.</p>
-      <p>Drives copy across nav, marketing, sales scripts, and the assistant's elicitation prompts — same word in every surface.</p>
+      <p>"Computational chemistry engine", not platform, OS, substrate, operating layer, or orchestration. Those nouns collide with every competitor in the category. The diagnostic test on every public line: could a competitor put this exact sentence on their homepage unchanged? If yes, replace the noun.</p>
+      <p>Drives copy across nav, marketing, sales scripts, and the assistant's elicitation prompts, same word in every surface.</p>
     </div>
     <div class="decision fade-in">
       <h3>Scale-to-zero by default</h3>
@@ -963,21 +963,21 @@
     <div class="decision fade-in">
       <h3>Azure → AWS migration</h3>
       <p>Full inventory: Aurora (replacing Azure SQL), EKS (replacing Container Apps), S3 + CloudFront (replacing Blob), Secrets Manager, Bedrock-adjacent + NVIDIA credits. ~30 services, ~12 weeks. Reconciliation layer (row parity, schema parity, NULL audit, value fidelity) baked into every cutover.</p>
-      <p>Customer surfaces — download links, auto-update manifest, MCP endpoints — moved without version regression for existing users.</p>
+      <p>Customer surfaces, download links, auto-update manifest, MCP endpoints, moved without version regression for existing users.</p>
     </div>
     <div class="decision fade-in">
       <h3>Private-endpoint-only infra</h3>
-      <p>EKS API, Aurora, Redis, and internal ALBs are all private. GitHub-hosted runners can't reach them — every <code>kubectl apply</code> / <code>psql</code> times out from CI. Locked design: build on GH runners, deploy via GH OIDC → SSM → bastion.</p>
+      <p>EKS API, Aurora, Redis, and internal ALBs are all private. GitHub-hosted runners can't reach them, every <code>kubectl apply</code> / <code>psql</code> times out from CI. Locked design: build on GH runners, deploy via GH OIDC → SSM → bastion.</p>
       <p>Applied uniformly to every NovoServices repo so the pattern doesn't re-litigate per port. Bastion is pre-wired with kubectl, psql, EKS + Aurora + Secrets perms.</p>
     </div>
     <div class="decision fade-in">
       <h3>Tier model: research preview included</h3>
-      <p>Free tier with credits, no time limit, no credit card. Reviewed manually (the research-preview admin surface tracks each application). Approval queues a tier bump that auto-fires when the user signs up — no manual provisioning step at signup time.</p>
+      <p>Free tier with credits, no time limit, no credit card. Reviewed manually (the research-preview admin surface tracks each application). Approval queues a tier bump that auto-fires when the user signs up, no manual provisioning step at signup time.</p>
       <p>Trade-off: review labor. Buys product-market-fit signal, an actual user cohort to learn from, and a referral surface.</p>
     </div>
     <div class="decision fade-in">
       <h3>Human-in-the-loop, not autonomous</h3>
-      <p>The discovery funnel is twelve stages. It runs as an MCP server inside the user's assistant — every stage prompts the user via MCP elicitation. <strong>Not</strong> a standalone autonomous agent running on someone else's compounds.</p>
+      <p>The discovery funnel is twelve stages. It runs as an MCP server inside the user's assistant, every stage prompts the user via MCP elicitation. <strong>Not</strong> a standalone autonomous agent running on someone else's compounds.</p>
       <p>The audit trail records every gate, every decision, every tool call. Pipeline audits are the quality gates; the funnel is what's audited.</p>
     </div>
   </div>
@@ -1007,7 +1007,7 @@
 <div class="footer-copy">© 2026 Ari Harrison. Selectively open to research conversations.</div>
 
 <script>
-  // Theme toggle — mirrors index.html so the preference roundtrips.
+  // Theme toggle, mirrors index.html so the preference roundtrips.
   const themeToggle = document.getElementById('themeToggle');
   const root = document.documentElement;
   function setTheme(theme) {
