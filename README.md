@@ -24,9 +24,9 @@ The engine is the product. The surface is how you reach it.
 
 ## Also shipping · Open source
 
-- **[NovoMD](https://github.com/realariharrison/NovoMD)** (MIT). Local-first molecular descriptors. SMILES → 32+ descriptors from a 3D conformer, calculated on your own machine, no account. Ships as Python library (`pip install novomd`) + CLI (`novomd props "CCO"`) + [Hugging Face MCP endpoint](https://huggingface.co/spaces/quantnexusai/novomd) (works with Claude, Cursor, any MCP client) + Docker REST service. The design call: scope discipline. No ADMET, no pKa, no binding. Documented in the README and shipped as an agent skill.
+- **[NovoMD](https://github.com/ariharrisonlab/NovoMD)** (MIT). Local-first molecular descriptors. SMILES → 32+ descriptors from a 3D conformer, calculated on your own machine, no account. Ships as Python library (`pip install novomd`) + CLI (`novomd props "CCO"`) + [Hugging Face MCP endpoint](https://huggingface.co/spaces/quantnexusai/novomd) (works with Claude, Cursor, any MCP client) + Docker REST service. The design call: scope discipline. No ADMET, no pKa, no binding. Documented in the README and shipped as an agent skill.
 
-See the [full product portfolio →](https://realariharrison.github.io/portfolio.html)
+See the [full product portfolio →](https://ariharrisonlab.github.io/portfolio.html)
 
 ## The Stack
 
@@ -42,18 +42,18 @@ NVIDIA Inception · AWS Activate · Microsoft Founders Hub
 
 ## Links
 
-- [Product portfolio (one engine, six surfaces)](https://realariharrison.github.io/portfolio.html)
+- [Product portfolio (one engine, six surfaces)](https://ariharrisonlab.github.io/portfolio.html)
 - [NovoMCP](https://novomcp.com)
-- [X / Twitter](https://x.com/realariharrison)
+- [X / Twitter](https://x.com/ariharrisonlab)
 - [Google Scholar](https://scholar.google.com/citations?hl=en&user=O3Bdfh8AAAAJ)
 - [LinkedIn](https://www.linkedin.com/in/realariharrison/)
-- [GitHub](https://github.com/realariharrison)
-- [YouTube](https://www.youtube.com/@AriHarrison1)
+- [GitHub](https://github.com/ariharrisonlab)
+- [YouTube](https://www.youtube.com/@ariharrisonlab)
 - [Writing](https://substack.com/@ariharrison)
 
 ## Leadership decisions
 
-A selection of product, infra, and positioning calls made shipping NovoMCP (full version at [realariharrison.github.io/#leadership](https://realariharrison.github.io/#leadership)).
+A selection of product, infra, and positioning calls made shipping NovoMCP (full version at [ariharrisonlab.github.io/#leadership](https://ariharrisonlab.github.io/#leadership)).
 
 - **Two MCP servers, not one**: governance separation between free-tier and paid-only tools
 - **Scale-to-zero by default**: every compute service ships with `min_replicas=0`
